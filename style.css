@@ -1,0 +1,549 @@
+/* CSS Variables for Color Theme */
+:root {
+    --yellow: #FFD700;
+    --blue: #1E90FF;
+    --violet: #8A2BE2;
+    --light-yellow: #FFFACD;
+    --light-blue: #87CEFA;
+    --light-violet: #E6E6FA;
+    --dark-violet: #4B0082;
+    --white: #FFFFFF;
+    --black: #333333;
+    --gray: #777777;
+    --light-gray: #F5F5F5;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: var(--violet);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--yellow);
+    border-radius: 2px;
+}
+
+/* Header Styles */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--violet);
+    font-weight: 700;
+}
+
+.logo h1 i {
+    margin-right: 10px;
+    color: var(--yellow);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover {
+    color: var(--white);
+    background-color: var(--violet);
+}
+
+.navbar ul li a.active {
+    color: var(--white);
+    background-color: var(--violet);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://source.unsplash.com/1600x900/?indian,food,feast') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.quote-box {
+    margin-bottom: 2rem;
+}
+
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-message h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--light-gray);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.menu-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 1.5rem;
+}
+
+.menu-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--violet);
+}
+
+.menu-content p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blue);
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+/* Quotes Section */
+.quotes-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--light-violet), var(--light-blue));
+}
+
+.quotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quote-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 5px solid var(--yellow);
+    transition: all 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quote-card p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--dark-violet);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.quote-card p::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    left: -1rem;
+    top: -1.5rem;
+    color: var(--light-yellow);
+    font-family: serif;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--violet);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.2);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--violet), var(--blue));
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, var(--blue), var(--violet));
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--light-blue), var(--light-violet));
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--violet);
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-detail i {
+    font-size: 1.5rem;
+    color: var(--violet);
+    margin-right: 1rem;
+    width: 30px;
+}
+
+.contact-detail p {
+    font-size: 1.1rem;
+    color: var(--black);
+}
+
+.social-links {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--violet);
+    color: var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--blue);
+    transform: translateY(-5px);
+}
+
+.call-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.call-btn:hover {
+    background: var(--violet);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.note {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: var(--gray);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: var(--violet);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.food-icons {
+    font-size: 1.5rem;
+}
+
+.food-icons span {
+    margin: 0 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+.food-icons span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.food-icons span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.food-icons span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    
+    .navbar ul {
+        margin-top: 1rem;
+    }
+    
+    .navbar ul li {
+        margin: 0 0.5rem;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 4rem 0;
+    }
+    
+    .quote {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-message h2 {
+        font-size: 1.5rem;
+    }
+    
+    .welcome-message p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .booking-container {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar ul li {
+        margin: 0.3rem;
+    }
+    
+    .navbar ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .quote {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-detail i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
